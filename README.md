@@ -11,7 +11,7 @@ __________________________________________
   #include<iostream>
   
 	clock_t t;
-	t = clock();                                                                                 //start
-                                                                                                      //run
+	t = clock();                                                                                //start
+                                                                                                    //run
 	cout<<"\nTime taken by program is :\t"<< ((double)clock() - t) / CLOCKS_PER_SEC << " sec\n";//stop
 ``` 
