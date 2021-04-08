@@ -26,6 +26,7 @@ void add(double** a) {
 }
 
 int main() {
+
 	double** arr = new double* [10];
 	for (int i = 0; i < 10; i++) {
 		arr[i] = new double[4]{ NULL };
@@ -39,7 +40,7 @@ int main() {
 		}
 		cout << endl;
 	}
-	
+}
 ``` 
 
 
