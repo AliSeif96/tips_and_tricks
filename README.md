@@ -138,3 +138,99 @@ vector_2d_int matrix_vector(int size_matrix, void* ptr) {
 }
 
 ```
+## Calculate different operators on all the arrays of a pointer array
+________________________________________
+```ruby
+#include<iostream>
+#define size_matrix 200 
+
+enum class Type
+{
+    S,
+    M,
+    C,
+    D
+};
+
+
+double* calpoint(double* a, Type type, double b)
+{
+    double* c = new double[size_matrix] {0};
+
+    switch (type)
+    {
+    case Type::S:
+        for (int i = 0; i < size_matrix; i++) {
+            c[i] = a[i] + b;
+        }
+        break;
+
+    case Type::M:
+        for (int i = 0; i < size_matrix; i++) {
+            c[i] = a[i] - b;
+        }
+        break;
+
+    case Type::C:
+        for (int i = 0; i < size_matrix; i++) {
+            c[i] = a[i] * b;
+        }
+        break;
+    case Type::D:
+        for (int i = 0; i < size_matrix; i++) {
+            c[i] = a[i] / b;
+        }
+        break;
+    }
+
+    return   c;
+}
+double* calpoint(double* a, Type type, double* b)
+{
+    double* c = new double[size_matrix] {0};
+
+    switch (type)
+    {
+    case Type::S:
+        for (int i = 0; i < size_matrix; i++) {
+            c[i] = a[i] + b[i];
+        }
+        break;
+
+    case Type::M:
+        for (int i = 0; i < size_matrix; i++) {
+            c[i] = a[i] - b[i];
+        }
+        break;
+
+    case Type::C:
+        for (int i = 0; i < size_matrix; i++) {
+            c[i] = a[i] * b[i];
+        }
+        break;
+    case Type::D:
+        for (int i = 0; i < size_matrix; i++) {
+            c[i] = a[i] / b[i];
+        }
+        break;
+    }
+
+    return   c;
+}
+
+
+int main()
+{
+	double* a = new double[size_matrix] {0};
+	double* b = new double[size_matrix] {0};//or double b=5;
+	double* c = new double[size_matrix] {0};
+	
+	c = calpoint(a, Type::S, b);
+
+	
+    for (int i = 0; i < size_matrix; i++) {
+        cout << c[i] << endl;
+    }
+}
+
+``` 
