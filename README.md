@@ -3,6 +3,29 @@
 
 __________________________________________
 #  C++
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@---
+//@@@                               count rows file in .txt                         //@@@                                   ---
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                                   ---
+int count_rows_file(string file1)                                                   //@@@                                   ---
+{                                                                                   //@@@                                   ---
+    int rows = 0, cols = 0;                                                         //@@@                                   ---
+    string line, item;                                                              //@@@                                   ---
+    ifstream file(file1);                                                           //@@@                                   ---
+    while (getline(file, line))                                                     //@@@                                   ---
+    {                                                                               //@@@                                   ---
+        rows++;                                                                     //@@@                                   ---
+        if (rows == 1)                                                              //@@@First row only:                    ---
+        {                                                                           //@@@determine the number of columns    ---
+            stringstream ss(line);                                                  //@@@Set up up a stream from this line  ---
+            while (ss >> item) cols++;                                              //@@@Each item delineated by spaces     ---
+        }                                                                           //@@@adds one to cols                   ---
+    }                                                                               //@@@                                   ---
+    file.close();                                                                   //@@@                                   ---
+    cout << "\nFile had " << rows << " rows and " << cols << " columns\n" << endl;  //@@@                                   ---
+    return rows;                                                                    //@@@                                   ---
+}                                                                                   //@@@                                   ---
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@---
+
 
 ## calculate time run
 ________________________________________
