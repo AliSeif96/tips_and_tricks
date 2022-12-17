@@ -45,6 +45,37 @@ ________________________________________
 //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@---
 //@@@                               count rows file in .txt                         //@@@                                   ---
 //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                                   ---
+tuple<int, int> count_rows_file(string file1) {                                     //@@@                                   ---
+    int rows = 0, cols = 0;                                                         //@@@                                   ---
+    string line, item;                                                              //@@@                                   ---
+    ifstream file(file1);                                                           //@@@                                   ---
+    while (getline(file, line))                                                     //@@@                                   ---
+    {                                                                               //@@@                                   ---
+        rows++;                                                                     //@@@                                   ---
+        if (rows == 1)                                                              //@@@First row only:                    ---
+        {                                                                           //@@@determine the number of columns    ---
+            stringstream ss(line);                                                  //@@@Set up up a stream from this line  ---
+            while (ss >> item) cols++;                                              //@@@Each item delineated by spaces     ---
+        }                                                                           //@@@adds one to cols                   ---
+    }                                                                               //@@@                                   ---
+    file.close();                                                                   //@@@                                   ---
+    cout << "\nFile had " << rows << " rows and " << cols << " columns\n" << endl;  //@@@                                   ---
+    return {rows,cols};                                                             //@@@                                   ---
+}                                                                                   //@@@                                   ---
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@---
+int main()
+{
+    int rows, cols;
+    tie(rows, cols) = count_rows_file("Input/Frequency=0.1Degree=60.txt"); //tie=constexpr tuple
+    cout << rows << ',' << cols << endl;
+    return 0;
+}
+```
+or
+```ruby
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@---
+//@@@                               count rows file in .txt                         //@@@                                   ---
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                                   ---
 int count_rows_file(string file1)                                                   //@@@                                   ---
 {                                                                                   //@@@                                   ---
     int rows = 0, cols = 0;                                                         //@@@                                   ---
