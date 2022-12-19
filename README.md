@@ -6,6 +6,9 @@ __________________________________________
 
 # Read matrix frustration
 ```ruby
+        ostringstream ostrfrequency;                                                //@@@declaring output string stream     ---
+        ostrfrequency << frequency;                                                 //@@@Sending a number as a stream output---
+        string strfrequency = ostrfrequency.str();                                  //@@@the str() converts number into string-
 //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@---
 //@@@                          Read matrix frustration                              //@@@                                   ---
 //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                                   ---
