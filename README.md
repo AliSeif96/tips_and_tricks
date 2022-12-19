@@ -4,11 +4,17 @@
 __________________________________________
 #  C++
 
-# Read matrix frustration
 ```ruby
-        ostringstream ostrfrequency;                                                //@@@declaring output string stream     ---
-        ostrfrequency << frequency;                                                 //@@@Sending a number as a stream output---
-        string strfrequency = ostrfrequency.str();                                  //@@@the str() converts number into string-
+
+ostringstream ostrfrequency;                                                //@@@declaring output string stream     ---
+ostrfrequency << frequency;                                                 //@@@Sending a number as a stream output---
+string strfrequency = ostrfrequency.str();                                  //@@@the str() converts number into string-
+```
+__________________________________________
+
+```ruby
+
+# Read matrix frustration
 //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@---
 //@@@                          Read matrix frustration                              //@@@                                   ---
 //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                                   ---
