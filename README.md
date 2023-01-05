@@ -1,5 +1,17 @@
 # tips_and_tricks
 
+__________________________________________
+#  Python
+### calculate RAM
+```ruby
+import os 
+import psutil 
+process = psutil.Process(os.getpid())
+print('Ram usage: {:.2f} MB' .format(process.memory_info().rss/1000000))
+```
+
+
+
 
 __________________________________________
 #  C++
