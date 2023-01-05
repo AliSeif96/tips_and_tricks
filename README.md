@@ -1,5 +1,13 @@
 # tips_and_tricks
 
+
+
+
+
+
+
+
+
 __________________________________________
 #  Python
 ### calculate RAM
@@ -10,7 +18,12 @@ process = psutil.Process(os.getpid())
 print('Ram usage: {:.2f} MB' .format(process.memory_info().rss/1000000))
 ```
 
-
+### calculate Time
+```ruby
+import time
+start_time=time.time()#Start
+print(" time: {:.3f} sec".format(time.time()-start_time))#end
+```
 
 
 __________________________________________
