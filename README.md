@@ -3,8 +3,9 @@
 
 
 
+https://mne.tools/stable/index.html#
 
-
+site for best show plot python
 
 
 
