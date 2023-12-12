@@ -7,8 +7,13 @@ https://mne.tools/stable/index.html#
 
 site for best show plot python
 
+__________________________________________
+#  Git code in terminal
 
-
+### Push all changes in github
+```ruby
+git push origin HEAD:main 
+```
 __________________________________________
 #  Python
 ### calculate RAM
